@@ -299,10 +299,13 @@ sw_peeps2 %>%
 Write some code to identify who is is the heaviest (look at the graph to help guide this) Star Wars character (excluding Jabba Desilijic Tiure).
 
 ```{r}
-
+sw_peeps2 %>% 
+  filter(name != "Jabba Desilijic Tiure") %>% 
+  arrange(desc(mass)) %>% 
+  slice_head(n = 1)
 ```
 
->Insert Answer Here
+> General Grievous is the heaviest character.
 
 
 
